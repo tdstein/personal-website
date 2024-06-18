@@ -4,7 +4,7 @@ This is my personal website. It's simple and fast.
 
 ## Deployment
 
-The master branch of this project is served using [GitHub Pages](https://pages.github.com/). Commits to the master branch will automatically be published.
+The main branch of this project is served using [GitHub Pages](https://pages.github.com/). Commits to the master branch will automatically be published.
 
 ## Built With
 
