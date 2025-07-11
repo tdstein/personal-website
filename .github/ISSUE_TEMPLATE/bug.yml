@@ -1,0 +1,108 @@
+name: Report a bug
+description: Found something? Thanks for telling us!
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please add additional [labels](https://github.com/posit-dev/connect/labels) (aside from `bug`) to contextualize this issue for triage purposes.
+
+  - type: markdown
+    attributes:
+      value: |
+        ## System details
+
+  - type: input
+    id: connect-version
+    attributes:
+      label: Connect Version
+      placeholder: e.g., 2023.12.0
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: OS Version
+      placeholder: e.g., Ubuntu 22.04, Windows 11, macOS 14.0
+    validations:
+      required: true
+
+  - type: input
+    id: auth-provider
+    attributes:
+      label: Auth Provider
+      placeholder: e.g., LDAP, SAML, OAuth, Local
+    validations:
+      required: false
+
+  - type: input
+    id: r-version
+    attributes:
+      label: R Version
+      placeholder: e.g., 4.3.2
+    validations:
+      required: false
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python Version
+      placeholder: e.g., 3.11.5
+    validations:
+      required: false
+
+  - type: input
+    id: origin
+    attributes:
+      label: Origin of Bug
+      description: Add a link to customer ticket, ProdPad, discussion, etc.
+      placeholder: https://...
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: Describe the problem you're experiencing
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide detailed steps to reproduce the issue
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output
+      render: shell
+    validations:
+      required: false
